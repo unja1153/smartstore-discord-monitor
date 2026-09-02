@@ -63,5 +63,6 @@ jobs:
             echo "상품 변경이 없어 기준값을 그대로 유지합니다."
           else
             git commit -m "chore: update smartstore monitor state [skip ci]"
+            git pull --rebase origin main
             git push
           fi
