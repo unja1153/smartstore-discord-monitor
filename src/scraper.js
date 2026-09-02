@@ -74,7 +74,7 @@ async function scrapeStorePages(context, config, debugDir) {
   let emptyOrRepeatedPages = 0;
 
   for (let pageNumber = 1; pageNumber <= config.maxStorePages; pageNumber += 1) {
-    const pageUrl = `${config.storeUrl}/category/ALL?st=RECENT&cp=${pageNumber}`;
+    const pageUrl = `${config.storeUrl}/category/e0fdf40a28bd452fbf1266e7f06eb472?st=RECENT&cp=${pageNumber}`;
     const result = await scrapeListingPage(context, pageUrl, config, debugDir, pageNumber);
 
     let newOnPage = 0;
