@@ -2369,6 +2369,20 @@
       "imageUrl": "https://shop-phinf.pstatic.net/20260427_194/1777261969573HxH0S_JPEG/31844031207546230_1663705573.jpeg?type=f750_750",
       "firstSeenAt": "2026-09-02T12:06:52.572Z",
       "lastChangedAt": "2026-09-02T12:06:52.572Z"
+    },
+    "12773438291": {
+      "id": "12773438291",
+      "url": "https://smartstore.naver.com/updda/products/12773438291",
+      "name": "쟁반 트레이 76cm, 아이보리, 1개",
+      "currentPrice": 5000,
+      "originalPrice": 12000,
+      "discountRate": 58,
+      "stockQuantity": null,
+      "soldOut": false,
+      "stockStatus": "판매 가능",
+      "imageUrl": "https://shop-phinf.pstatic.net/20251204_201/1764803291147MS44x_JPEG/3649550257103890_1680909388.jpg?type=f750_750",
+      "firstSeenAt": "2026-10-07T03:03:16.732Z",
+      "lastChangedAt": "2026-10-07T03:03:16.732Z"
     }
   }
 }
