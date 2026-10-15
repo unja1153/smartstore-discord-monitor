@@ -2383,6 +2383,34 @@
       "imageUrl": "https://shop-phinf.pstatic.net/20251204_201/1764803291147MS44x_JPEG/3649550257103890_1680909388.jpg?type=f750_750",
       "firstSeenAt": "2026-10-07T03:03:16.732Z",
       "lastChangedAt": "2026-10-07T03:03:16.732Z"
+    },
+    "12773410781": {
+      "id": "12773410781",
+      "url": "https://smartstore.naver.com/updda/products/12773410781",
+      "name": "쟁반 트레이 76cm, 그린, 20개",
+      "currentPrice": 209600,
+      "originalPrice": 216800,
+      "discountRate": 3,
+      "stockQuantity": null,
+      "soldOut": false,
+      "stockStatus": "판매 가능",
+      "imageUrl": "https://shop-phinf.pstatic.net/20250716_86/1752627989551jKzD6_JPEG/50106124120755180_960016613.jpeg?type=f750_750",
+      "firstSeenAt": "2026-10-15T02:09:06.911Z",
+      "lastChangedAt": "2026-10-15T02:09:06.911Z"
+    },
+    "12105494167": {
+      "id": "12105494167",
+      "url": "https://smartstore.naver.com/updda/products/12105494167",
+      "name": "인조 꽃술 노란 꽃 / 50ea",
+      "currentPrice": 3000,
+      "originalPrice": 8000,
+      "discountRate": 63,
+      "stockQuantity": null,
+      "soldOut": false,
+      "stockStatus": "판매 가능",
+      "imageUrl": "https://shop-phinf.pstatic.net/20260427_169/1777261961177fd7uq_JPEG/41774651709014150_1758970315.jpeg?type=f750_750",
+      "firstSeenAt": "2026-10-15T02:09:06.911Z",
+      "lastChangedAt": "2026-10-15T02:09:06.911Z"
     }
   }
 }
