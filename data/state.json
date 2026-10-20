@@ -2249,14 +2249,14 @@
       "url": "https://smartstore.naver.com/updda/products/12105494452",
       "name": "인조 파슬리",
       "currentPrice": 3000,
-      "originalPrice": 4200,
-      "discountRate": 29,
+      "originalPrice": 4900,
+      "discountRate": 39,
       "stockQuantity": null,
       "soldOut": false,
       "stockStatus": "판매 가능",
       "imageUrl": "https://shop-phinf.pstatic.net/20260427_105/1777261939311sRlPf_JPEG/530402447980315_1157317624.jpeg?type=f750_750",
       "firstSeenAt": "2026-09-02T12:06:52.572Z",
-      "lastChangedAt": "2026-09-02T12:06:52.572Z"
+      "lastChangedAt": "2026-10-20T02:25:30.886Z"
     },
     "12105494394": {
       "id": "12105494394",
