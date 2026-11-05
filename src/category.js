@@ -35,11 +35,12 @@ function productFromSimple(raw, storeUrl) {
   }, storeUrl);
 }
 
-async function readCategory(page, config, categoryId) {
+// 한 화면(정렬 하나)을 연다. 로그인 화면으로 넘어가면 한 번 더 시도한다.
+// GitHub 서버에서는 «size=80» 주소가 항상 로그인 화면으로 넘어가 한 화면에 40개만 읽는다.
+async function readCategory(page, config, categoryId, sort = 'RECENT') {
   const urls = [
-    `${config.storeUrl}/category/${categoryId}?st=RECENT&dt=LIST&size=80&cp=1`,
-    `${config.storeUrl}/category/${categoryId}?st=RECENT&cp=1`,
-    `${config.storeUrl}/category/${categoryId}?cp=1`
+    `${config.storeUrl}/category/${categoryId}?st=${sort}&cp=1`,
+    `${config.storeUrl}/category/${categoryId}?st=${sort}&cp=1&t=${Date.now() % 100000}`
   ];
   let lastProblem = '';
   for (let attempt = 0; attempt < urls.length; attempt += 1) {
@@ -84,21 +85,37 @@ export async function scrapeTargets(config, debugDir) {
       const byId = new Map();
       const parts = [];
       for (const categoryId of target.categoryIds) {
-        const r = await readCategory(page, config, categoryId);
+        // 최신순 화면을 먼저 열고, 다 안 들어왔으면 낮은 가격순·높은 가격순 화면을 더 열어 합친다(80개까지 빠짐없이).
+        const seenHere = new Set();
         let added = 0;
-        for (const raw of r.items) {
-          const p = productFromSimple(raw, config.storeUrl);
-          if (p && !byId.has(p.id)) { byId.set(p.id, p); added += 1; }
-        }
-        // 그 화면에 다 들어왔는지: 받은 개수 >= 전체 개수
-        const full = r.ok && (r.totalCount == null || r.items.length >= r.totalCount);
-        parts.push({ categoryId, ok: r.ok, full, got: r.items.length, total: r.totalCount, problem: r.problem || null });
-        console.log(`[${target.name}] ${categoryId.slice(0, 6)}… ${r.ok ? `${r.items.length}/${r.totalCount ?? '?'}개, 새로 ${added}개` : `실패: ${r.problem}`}`);
+        let first = null;
+        const take = (items) => {
+          for (const raw of items) {
+            const p = productFromSimple(raw, config.storeUrl);
+            if (!p) continue;
+            seenHere.add(p.id);
+            if (!byId.has(p.id)) { byId.set(p.id, p); added += 1; }
+          }
+        };
+        first = await readCategory(page, config, categoryId, 'RECENT');
+        take(first.items);
         await sleep(config.requestDelayMs);
+        if (first.ok && first.totalCount != null && seenHere.size < first.totalCount) {
+          for (const sort of ['LOW_PRICE', 'HIGH_PRICE']) {
+            if (seenHere.size >= first.totalCount) break;
+            const more = await readCategory(page, config, categoryId, sort);
+            take(more.items);
+            await sleep(config.requestDelayMs);
+          }
+        }
+        const r = first;
+        const full = r.ok && (r.totalCount == null || seenHere.size >= r.totalCount);
+        parts.push({ categoryId, ok: r.ok, full, got: seenHere.size, total: r.totalCount, problem: r.problem || null });
+        console.log(`[${target.name}] ${categoryId.slice(0, 6)}… ${r.ok ? `${seenHere.size}/${r.totalCount ?? '?'}개, 새로 ${added}개` : `실패: ${r.problem}`}`);
       }
       const failed = parts.filter((p) => !p.ok);
       // 대분류 화면(첫 번째)이 80개를 넘으면 중분류로 채우므로, 실패한 화면이 없을 때만 «전부 읽음»으로 본다.
-      const complete = !failed.length && parts.slice(1).every((p) => p.full) && (parts.length > 1 || parts[0].full);
+      const complete = !failed.length && parts.every((p, i) => i === 0 || p.full) && (parts[0].full || (parts[0].total != null && byId.size >= parts[0].total));
       results.push({ target, products: [...byId.values()], parts, failed, complete });
       console.log(`[${target.name}] 합계 ${byId.size}개 (${complete ? '전부' : failed.length ? `실패 ${failed.length}곳` : '일부'})`);
     }
