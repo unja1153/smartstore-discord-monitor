@@ -2,6 +2,21 @@
   "version": 1,
   "events": [
     {
+      "at": "2026-11-05T08:38:06.665Z",
+      "target": "정육용품",
+      "types": [
+        "discount"
+      ],
+      "id": "12110301256",
+      "name": "화성 무쇠대바",
+      "url": "https://smartstore.naver.com/updda/products/12110301256",
+      "price": 13000,
+      "stock": "9999개",
+      "changes": [
+        "💰 판매가: 12,900원 → 13,000원"
+      ]
+    },
+    {
       "at": "2026-11-05T07:53:15.176Z",
       "target": "트레이·용기",
       "types": [
