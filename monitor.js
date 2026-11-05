@@ -21,6 +21,12 @@ const EMPTY_STATE = {
 };
 
 const config = loadConfig();
+
+// 2026-11-05: config.json 에 targets(카테고리별 방)가 있으면 카테고리 방식으로 돌린다.
+if (Array.isArray(config.targets) && config.targets.length) {
+  await import('./monitorCategories.js');
+  process.exit(process.exitCode || 0);
+}
 let state = readJson(paths.state, EMPTY_STATE);
 state = { ...EMPTY_STATE, ...state, products: state.products || {} };
 

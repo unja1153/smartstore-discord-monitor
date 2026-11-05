@@ -8,9 +8,133 @@
   "maxProducts": 1000,
   "maxDetailedEvents": 30,
   "pageWaitMs": 2500,
-  "requestDelayMs": 1500,
+  "requestDelayMs": 3000,
   "notifyOnBaseline": true,
   "notifyOnRecovery": true,
   "errorAlertAfterFailures": 1,
-  "timezone": "Asia/Seoul"
+  "timezone": "Asia/Seoul",
+  "notifyStockQuantity": true,
+  "targets": [
+    {
+      "key": "선물포장용품",
+      "name": "선물포장용품",
+      "categoryIds": [
+        "072f8dbcdc81457c891a617eff339d00",
+        "c1d311c09a034534ad97f7cce34f47aa",
+        "047c532c616b4897a522ca48cc92cd1a",
+        "9919c689a3ce43da9d8833b4d66ff940",
+        "5fcae9844e924d9faba32b67549f8876",
+        "5210ff624ad34dd4a4907fd690514401",
+        "10c279e5c94e4b2abf58f0056ed3d0d4",
+        "83e53eabae8442e4b76d55b6386153d1",
+        "f9d7375334cd4a14b9c3782f58910583",
+        "940af1cd5e3349f291ab884bad28dba6",
+        "88237626e64b4dac8f4ec6649a894f9b"
+      ],
+      "discordChannelId": "1567785670817349742"
+    },
+    {
+      "key": "스티커·띠지",
+      "name": "스티커·띠지",
+      "categoryIds": [
+        "2ea8bbedb16847068a6569f2dd9e0f57",
+        "172cc03dfd27418994346b1c4331aa8f",
+        "987decd4580a4ad6b922dc1cb03eba8d",
+        "2645b0340b72495cb645a4250516d451",
+        "dfaea38b8b3e4e03a2314b05818df809",
+        "6cb50c35cd9f4377860e432163733561",
+        "9a13fa9379f446a0b5b4fa14ace6b599",
+        "91775ff177e4451a84803f0da088fff6",
+        "22668a68c15a4b698bc7379aa63b6be9"
+      ],
+      "discordChannelId": "1567785677758795796"
+    },
+    {
+      "key": "트레이·용기",
+      "name": "트레이·용기",
+      "categoryIds": [
+        "9509fa2f32dc4dc5a9556d1f0c37e9c5",
+        "d0cdfdde866f4177ae290fff2754de18",
+        "271eb86628384cf9975e02b6b74af422",
+        "b52b4f4f5dad4df3b8c93f36a34c2cf8",
+        "f864688900f54adfbde85e563c7d290a",
+        "fec6e983b0494ea9ac8bd6b6c57e8c44",
+        "557413afe1a04aaca25eeb76732f93a2",
+        "442a3ff50bd7404db63dcfd335c27e24",
+        "3aebaf7e977e4a3e811005512c0e25db",
+        "c2b1a6518be2418d922e096f95372c3f",
+        "c79bc38d30b145229f6949b66fc7677f",
+        "42f58bff93bb4466b835f9e0afa0c5f1",
+        "c66a1c6aa56d48c3857c7221b8bae048",
+        "7df484c99be94cae82f1c5008960e486"
+      ],
+      "discordChannelId": "1567785684385792040"
+    },
+    {
+      "key": "비닐",
+      "name": "비닐",
+      "categoryIds": [
+        "43e5208719dd436abaafea4753084258"
+      ],
+      "discordChannelId": "1567785691092619294"
+    },
+    {
+      "key": "진공·수축필름",
+      "name": "진공·수축필름",
+      "categoryIds": [
+        "aec1736203114f1eb1e68f8c333681db"
+      ],
+      "discordChannelId": "1567785698075873415"
+    },
+    {
+      "key": "정육용품",
+      "name": "정육용품",
+      "categoryIds": [
+        "b599b6e9cbd54275814e3d10324fcfa2",
+        "b20f8419229045a8922c36eca7c5b3fe",
+        "e7e397a8f284462ba4dc9e0b70d9c445",
+        "cb34bb7f5578490499cb8dedbad3d517",
+        "cae5412fd32f4a04aa4b868c3eea04ef",
+        "14b77fde644047808c5a279ae5cf1aa4",
+        "004ec9e1ad9147d991d921d5c9a136b1",
+        "559e78bd82164e9283c7042b84ebd08d",
+        "464c7c1cf7f2422c8f57f3c82be9b09e",
+        "e428c412835344039b85c690dd5234a2",
+        "b963421454684abaac888135aeda3479"
+      ],
+      "discordChannelId": "1567785704912855131"
+    },
+    {
+      "key": "주방·매장용품",
+      "name": "주방·매장용품",
+      "categoryIds": [
+        "e0fdf40a28bd452fbf1266e7f06eb472"
+      ],
+      "discordChannelId": "1567785711967674519"
+    },
+    {
+      "key": "식자재",
+      "name": "식자재",
+      "categoryIds": [
+        "9b9e85e3f03e41b0b3cf4ebd280f90b8"
+      ],
+      "discordChannelId": "1567785719303241788"
+    },
+    {
+      "key": "기계",
+      "name": "기계",
+      "categoryIds": [
+        "60a02a7b27c14e25873e4332fa909daf"
+      ],
+      "discordChannelId": "1567785728019275787"
+    },
+    {
+      "key": "이벤트",
+      "name": "이벤트",
+      "categoryIds": [
+        "922caad3510546389c0cd062e923d347"
+      ],
+      "discordChannelId": "1567785734696341554"
+    }
+  ]
 }
