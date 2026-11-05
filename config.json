@@ -4,12 +4,13 @@
   "pinnedProductUrls": [
     "https://smartstore.naver.com/updda/products/12110301256"
   ],
-  "maxStorePages": 5,
-  "maxProducts": 200,
-  "pageWaitMs": 2200,
-  "requestDelayMs": 900,
+  "maxStorePages": 15,
+  "maxProducts": 1000,
+  "maxDetailedEvents": 30,
+  "pageWaitMs": 2500,
+  "requestDelayMs": 1500,
   "notifyOnBaseline": true,
   "notifyOnRecovery": true,
-  "errorAlertAfterFailures": 3,
+  "errorAlertAfterFailures": 1,
   "timezone": "Asia/Seoul"
 }

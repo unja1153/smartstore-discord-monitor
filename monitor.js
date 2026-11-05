@@ -94,7 +94,22 @@ try {
     }
   }
 
+  // 전체상품 목록을 끝까지 읽었을 때만: 지난번엔 있었는데 이번 목록에 없는 상품 = 판매중지·삭제·숨김
+  if (result.listComplete) {
+    for (const [id, previous] of Object.entries(state.products)) {
+      if (currentMap.has(id)) continue;
+      delete nextProducts[id];
+      events.push({
+        types: ['removed'],
+        product: { ...previous, stockStatus: '목록에서 빠짐' },
+        changes: ['⚫ 스토어 목록에서 빠졌습니다 (판매중지·삭제·숨김 가능).'],
+        detectedAt
+      });
+    }
+  }
+
   state.products = nextProducts;
+  state.lastRun = { at: detectedAt, totalCount: result.totalCount ?? null, collected: result.products.length, events: events.length };
   state.failureCount = 0;
   delete state.lastError;
   delete state.lastErrorAt;
@@ -108,6 +123,7 @@ try {
 
   if (events.length) {
     console.log(`${events.length}개 상품에서 변경을 감지했습니다.`);
+    for (const event of events.slice(0, 50)) console.log(` - ${event.product.name}: ${event.changes.join(' / ')}`);
     await sendProductEvents(config.webhookUrl, events, config);
   } else {
     console.log(`변경 없음: ${result.products.length}개 상품 확인 완료`);
@@ -153,12 +169,13 @@ function compareProduct(previous, current) {
   const previousSoldOut = previous.soldOut;
   const currentSoldOut = current.soldOut;
 
+  const statusWord = (product) => (product.soldOut ? (/개$/.test(product.stockStatus || '') ? '품절' : (product.stockStatus || '품절')) : '판매 가능');
   if (previousSoldOut === true && currentSoldOut === false) {
     types.push('restock');
-    changes.push('🟢 재고: 품절 → 판매 가능');
+    changes.push(`🟢 상태: ${statusWord(previous)} → 판매 가능`);
   } else if (previousSoldOut === false && currentSoldOut === true) {
     types.push('stock');
-    changes.push('🔴 재고: 판매 가능 → 품절');
+    changes.push(`🔴 상태: 판매 가능 → ${statusWord(current)}`);
   }
 
   if (
