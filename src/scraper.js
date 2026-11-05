@@ -111,19 +111,15 @@ async function scrapeAllProductsList(context, config, debugDir) {
       const state = window.__PRELOADED_STATE__?.categoryProducts;
       return state ? { items: state.simpleProducts || [], totalCount: state.totalCount ?? null } : null;
     });
-    if (!first) throw new Error('전체상품 자료(__PRELOADED_STATE__)를 찾지 못했습니다.');
-    totalCount = first.totalCount;
-    console.log(`[STORE] 1페이지: ${first.items.length}개, 신규 ${add(first.items)}개 (전체 ${totalCount ?? '?'}개)`);
+    const pagerCount = await page.evaluate(() => [...document.querySelectorAll('a')].filter((a) => /^\d{1,2}$/.test(a.innerText.trim()) && a.hasAttribute('aria-current')).length);
+    console.log(`[STORE] 열린 주소: ${page.url()} / 미리 담긴 자료: ${first ? `${first.items.length}개` : '없음'} / 페이지 번호 ${pagerCount}개`);
 
-    for (let pageNumber = 2; pageNumber <= config.maxStorePages; pageNumber += 1) {
-      if (totalCount && byId.size >= totalCount) break;
-      if (byId.size >= config.maxProducts) break;
-
+    // 페이지 번호를 누르고 그때 오는 목록 응답을 읽는다. n번이 화면에 없으면 «다음»(다음 10페이지 묶음)을 누른다.
+    const clickPage = async (pageNumber) => {
       const waitList = page.waitForResponse(
-        (res) => /\/categories\/[^/]+\/products\?/.test(res.url()) && res.url().includes(`page=${pageNumber}`),
+        (res) => /\/categories\/[^/]+\/products\?/.test(res.url()) && new RegExp(`[?&]page=${pageNumber}(&|$)`).test(res.url()),
         { timeout: 20000 }
       ).catch(() => null);
-
       const how = await page.evaluate((n) => {
         const anchors = [...document.querySelectorAll('a')];
         let target = anchors.find((a) => a.innerText.trim() === String(n) && a.getAttribute('aria-current') === 'false');
@@ -132,20 +128,41 @@ async function scrapeAllProductsList(context, config, debugDir) {
         if (target && target.getAttribute('aria-disabled') !== 'true') { target.click(); return 'next'; }
         return null;
       }, pageNumber);
-      if (!how) break;
-
+      if (!how) return null;
       const res = await waitList;
-      let items = [];
-      if (res && res.ok()) {
-        const data = await res.json().catch(() => null);
-        items = data?.simpleProducts || [];
-        if (data?.totalCount) totalCount = data.totalCount;
-      }
-      if (!items.length) {
-        await page.waitForTimeout(1500);
+      if (!res || !res.ok()) {
         console.warn(`[STORE] ${pageNumber}페이지 응답을 읽지 못했습니다 (${res ? res.status() : '응답 없음'}).`);
-        break;
+        return [];
       }
+      const data = await res.json().catch(() => null);
+      if (data?.totalCount) totalCount = data.totalCount;
+      return data?.simpleProducts || [];
+    };
+
+    let startPage = 2;
+    if (first && first.items.length) {
+      totalCount = first.totalCount;
+      console.log(`[STORE] 1페이지: ${first.items.length}개, 신규 ${add(first.items)}개 (전체 ${totalCount ?? '?'}개)`);
+    } else {
+      // 미리 담긴 자료가 없으면(GitHub 서버에서 열 때) 2페이지를 눌렀다가 1페이지로 돌아와 둘 다 응답으로 읽는다.
+      const p2 = await clickPage(2);
+      if (!p2) throw new Error('전체상품 화면에서 페이지 번호를 찾지 못했습니다.');
+      console.log(`[STORE] 2페이지: ${p2.length}개, 신규 ${add(p2)}개 (전체 ${totalCount ?? '?'}개)`);
+      await page.waitForTimeout(Math.max(config.requestDelayMs, 1500));
+      const p1 = await clickPage(1);
+      console.log(`[STORE] 1페이지: ${(p1 || []).length}개, 신규 ${add(p1)}개`);
+      if (!byId.size) throw new Error('전체상품 목록 응답을 읽지 못했습니다.');
+      startPage = 3;
+      // 1페이지에서 다시 3페이지로 가야 하므로 잠깐 쉬어 준다.
+      await page.waitForTimeout(Math.max(config.requestDelayMs, 1500));
+    }
+
+    for (let pageNumber = startPage; pageNumber <= config.maxStorePages; pageNumber += 1) {
+      if (totalCount && byId.size >= totalCount) break;
+      if (byId.size >= config.maxProducts) break;
+      const items = await clickPage(pageNumber);
+      if (!items) break;
+      if (!items.length) break;
       const added = add(items);
       console.log(`[STORE] ${pageNumber}페이지: ${items.length}개, 신규 ${added}개`);
       if (!added) break;
