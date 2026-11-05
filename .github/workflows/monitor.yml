@@ -12,6 +12,7 @@ on:
           - monitor
           - test-webhook
           - reset-baseline
+          - probe
   schedule:
   - cron: '0 0 * * *'
 
