@@ -4,7 +4,7 @@
   "pinnedProductUrls": [
     "https://smartstore.naver.com/updda/products/12110301256"
   ],
-  "maxStorePages": 15,
+  "maxStorePages": 30,
   "maxProducts": 1000,
   "maxDetailedEvents": 30,
   "pageWaitMs": 2500,
