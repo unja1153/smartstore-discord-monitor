@@ -76,6 +76,9 @@ export async function scrapeTargets(config, debugDir) {
   });
   const page = await context.newPage();
   const results = [];
+  // 네이버가 막기 시작하면(연속 3곳 실패) 더 두드리지 않고 멈춘다. 다음 날 다시 확인한다.
+  let failStreak = 0;
+  let stopped = false;
   try {
     // 스토어 첫 화면을 한 번 열어 둔다(사람처럼 들어가기).
     await page.goto(config.storeUrl, { waitUntil: 'domcontentloaded', timeout: 60000 }).catch(() => {});
@@ -87,6 +90,7 @@ export async function scrapeTargets(config, debugDir) {
       for (const categoryId of target.categoryIds) {
         // 대분류 화면에 다 들어왔으면 중분류는 열지 않는다(요청 수 줄이기).
         if (parts.length && parts[0].full) break;
+        if (stopped) { parts.push({ categoryId, ok: false, full: false, got: 0, total: null, problem: '네이버가 막아 건너뜀' }); continue; }
         // 최신순 화면을 먼저 열고, 다 안 들어왔으면 낮은 가격순·높은 가격순 화면을 더 열어 합친다(80개까지 빠짐없이).
         const seenHere = new Set();
         let added = 0;
@@ -101,6 +105,8 @@ export async function scrapeTargets(config, debugDir) {
         };
         first = await readCategory(page, config, categoryId, 'RECENT');
         take(first.items);
+        failStreak = first.ok ? 0 : failStreak + 1;
+        if (failStreak >= 3) { stopped = true; console.log(`[중단] 연속 3곳 실패(${first.problem}) — 네이버가 잠시 막은 것으로 보고 오늘은 여기서 멈춥니다.`); }
         await sleep(config.requestDelayMs);
         if (config.trySorts !== false && first.ok && first.totalCount != null && seenHere.size < first.totalCount) {
           for (const sort of ['LOW_PRICE', 'HIGH_PRICE']) {
