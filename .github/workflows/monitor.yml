@@ -13,8 +13,9 @@ on:
           - test-webhook
           - reset-baseline
           - probe
-  schedule:
-  - cron: '0 0 * * *'
+  # 2026-11-05: 자동 실행은 사무실 PC(Aside 루틴, 평일 08:00)로 옮김. GitHub 서버에서는 네이버가 2페이지를 막아서.
+  # schedule:
+  # - cron: '0 0 * * *'
 
 permissions:
   contents: write
