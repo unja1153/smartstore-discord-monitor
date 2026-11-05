@@ -151,6 +151,7 @@ async function scanStore(store) {
       else if (r.status !== 200) gone.push(it.no);
       else {
         const p = parseProduct(r.body, base, it.no);
+        if (p) p.name = p.name.replace(new RegExp(`\\s*-\\s*${store.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\s*$`), '').trim();
         if (p) products[p.id] = p; else gone.push(it.no);
       }
       await sleep(DELAY);
