@@ -121,6 +121,8 @@ try {
     await sendWebhook(config.webhookUrl, buildRecoveryPayload(config));
   }
 
+  if (events.length) appendHistory(events);
+
   if (events.length) {
     console.log(`${events.length}개 상품에서 변경을 감지했습니다.`);
     for (const event of events.slice(0, 50)) console.log(` - ${event.product.name}: ${event.changes.join(' / ')}`);
@@ -145,6 +147,24 @@ try {
 
   console.error(message);
   process.exitCode = 1;
+}
+
+// 2026-11-05: 업따 시스템 «스마트스토어 모니터» 화면이 읽는 변경 기록. 최근 1,000건만 남깁니다.
+function appendHistory(events) {
+  const file = paths.state.replace(/state\.json$/, 'events.json');
+  const history = readJson(file, { version: 1, events: [] });
+  const rows = events.map((event) => ({
+    at: event.detectedAt,
+    types: event.types,
+    id: event.product.id,
+    name: event.product.name,
+    url: event.product.url,
+    price: event.product.currentPrice ?? null,
+    stock: event.product.stockStatus ?? null,
+    changes: event.changes
+  }));
+  history.events = [...rows, ...(history.events || [])].slice(0, 1000);
+  writeJsonAtomic(file, history);
 }
 
 function mergeForComparison(previous, currentRaw) {
