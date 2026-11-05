@@ -101,11 +101,26 @@ async function scrapeAllProductsList(context, config, debugDir) {
   };
 
   try {
-    const listUrl = `${config.storeUrl}/category/ALL?st=RECENT&dt=LIST&size=80`;
-    const response = await page.goto(listUrl, { waitUntil: 'domcontentloaded', timeout: 60000, referer: config.storeUrl });
-    if (response && response.status() >= 400) throw new Error(`전체상품 페이지 HTTP ${response.status()}`);
-    await page.waitForTimeout(config.pageWaitMs);
+    // 2026-11-05: GitHub 서버에서는 «dt=LIST&size=80» 주소가 네이버 로그인 화면으로 넘어갔다.
+    // 예전부터 열리던 «category/ALL?cp=1»을 먼저 열고, 로그인 화면이면 다음 주소를 시도한다.
+    const candidates = [
+      `${config.storeUrl}/category/ALL?cp=1`,
+      `${config.storeUrl}/category/ALL?st=RECENT&cp=1`,
+      `${config.storeUrl}/category/ALL?st=RECENT&dt=LIST&size=80`
+    ];
+    let opened = false;
+    for (const listUrl of candidates) {
+      const response = await page.goto(listUrl, { waitUntil: 'domcontentloaded', timeout: 60000, referer: config.storeUrl });
+      await page.waitForTimeout(config.pageWaitMs);
+      const landed = page.url();
+      if (response && response.status() >= 400) { console.warn(`[STORE] ${listUrl} → HTTP ${response.status()}`); continue; }
+      if (/nid\.naver\.com|nidlogin/.test(landed)) { console.warn(`[STORE] ${listUrl} → 로그인 화면으로 넘어감, 다음 주소 시도`); await page.waitForTimeout(2000); continue; }
+      opened = true;
+      break;
+    }
+    if (!opened) throw new Error('전체상품 화면이 모두 네이버 로그인 화면으로 넘어갔습니다.');
     await detectBlockedPage(page);
+    await progressiveScroll(page, 3);
 
     const first = await page.evaluate(() => {
       const state = window.__PRELOADED_STATE__?.categoryProducts;
