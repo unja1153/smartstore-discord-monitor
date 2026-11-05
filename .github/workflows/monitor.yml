@@ -40,7 +40,8 @@ jobs:
       - name: 스마트스토어 확인
         id: monitor
         env:
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          # 2026-11-05: 새 채널(#스마트스토어-모니터) 웹후크는 DISCORD_WEBHOOK_URL_2
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL_2 || secrets.DISCORD_WEBHOOK_URL }}
           RUN_MODE: ${{ inputs.mode || 'monitor' }}
         run: npm run monitor
 
