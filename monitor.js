@@ -22,6 +22,12 @@ const EMPTY_STATE = {
 
 const config = loadConfig();
 
+// 2026-11-05: 경쟁사(카페24) 모드 — config.competitors 가 있으면 이것만 돌린다(probe·reset-baseline 포함).
+if (Array.isArray(config.competitors) && config.competitors.length) {
+  await import('./monitorCafe24.js');
+  process.exit(process.exitCode || 0);
+}
+
 // 2026-11-05: 시험 실행(probe) — 기준값·디스코드는 건드리지 않는다.
 if (config.runMode === 'probe') {
   await import('./probe.js');

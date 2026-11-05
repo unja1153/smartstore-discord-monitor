@@ -166,5 +166,24 @@
       "discordChannelId": "1567785734696341554"
     }
   ],
-  "trySorts": false
+  "trySorts": false,
+  "competitors": [
+    {
+      "key": "dadama",
+      "name": "다담아몰",
+      "url": "https://9062.co.kr"
+    },
+    {
+      "key": "daesung",
+      "name": "대성팩",
+      "url": "https://daesungpack.com"
+    },
+    {
+      "key": "theplus",
+      "name": "더플러스몰",
+      "url": "https://theplus2023.com"
+    }
+  ],
+  "cafe24DelayMs": 500,
+  "cafe24Concurrency": 2
 }
