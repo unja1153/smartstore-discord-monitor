@@ -35,7 +35,13 @@ export async function scrapeSmartStore(config, debugDir) {
   });
 
   try {
-    const storeProducts = await scrapeStorePages(context, config, debugDir);
+    const listing = await scrapeAllProductsList(context, config, debugDir).catch((error) => {
+      console.warn(`[STORE] 전체상품 목록 수집 실패, 예전 방식으로 재시도: ${error.message}`);
+      return null;
+    });
+    const storeProducts = listing?.products?.length
+      ? listing.products
+      : await scrapeStorePages(context, config, debugDir);
     const pinnedProducts = [];
 
     for (const url of config.pinnedProductUrls) {
@@ -56,16 +62,133 @@ export async function scrapeSmartStore(config, debugDir) {
       throw new Error('스토어에서 상품을 한 개도 수집하지 못했습니다. 네이버 차단 또는 페이지 구조 변경 가능성이 있습니다.');
     }
 
+    const totalCount = listing?.totalCount ?? null;
+    const listComplete = Boolean(totalCount && listing.products.length >= totalCount);
+    console.log(`[STORE] 전체 ${totalCount ?? '?'}개 중 ${storeProducts.length}개 수집 (${listComplete ? '전부' : '일부'})`);
+
     return {
       products,
       collectedAt: new Date().toISOString(),
       storeProductCount: storeProducts.length,
-      pinnedProductCount: pinnedProducts.length
+      pinnedProductCount: pinnedProducts.length,
+      totalCount,
+      listComplete
     };
   } finally {
     await context.close().catch(() => {});
     await browser.close().catch(() => {});
   }
+}
+
+// 2026-11-05: 스토어 «전체상품» 목록을 처음부터 끝까지 읽는다.
+// 네이버는 주소의 page 값을 무시하고 1페이지로 돌려보내므로, 화면의 페이지 번호를 눌러 넘긴다.
+// 1페이지는 화면에 미리 들어 있는 자료(__PRELOADED_STATE__), 2페이지부터는 누를 때 오는 목록 응답을 읽는다.
+async function scrapeAllProductsList(context, config, debugDir) {
+  const page = await context.newPage();
+  const byId = new Map();
+  let totalCount = null;
+
+  const add = (items) => {
+    let added = 0;
+    for (const raw of items || []) {
+      const product = productFromSimple(raw, config.storeUrl);
+      if (product && !byId.has(product.id)) {
+        byId.set(product.id, product);
+        added += 1;
+      }
+    }
+    return added;
+  };
+
+  try {
+    const listUrl = `${config.storeUrl}/category/ALL?st=RECENT&dt=LIST&size=80`;
+    const response = await page.goto(listUrl, { waitUntil: 'domcontentloaded', timeout: 60000, referer: config.storeUrl });
+    if (response && response.status() >= 400) throw new Error(`전체상품 페이지 HTTP ${response.status()}`);
+    await page.waitForTimeout(config.pageWaitMs);
+    await detectBlockedPage(page);
+
+    const first = await page.evaluate(() => {
+      const state = window.__PRELOADED_STATE__?.categoryProducts;
+      return state ? { items: state.simpleProducts || [], totalCount: state.totalCount ?? null } : null;
+    });
+    if (!first) throw new Error('전체상품 자료(__PRELOADED_STATE__)를 찾지 못했습니다.');
+    totalCount = first.totalCount;
+    console.log(`[STORE] 1페이지: ${first.items.length}개, 신규 ${add(first.items)}개 (전체 ${totalCount ?? '?'}개)`);
+
+    for (let pageNumber = 2; pageNumber <= config.maxStorePages; pageNumber += 1) {
+      if (totalCount && byId.size >= totalCount) break;
+      if (byId.size >= config.maxProducts) break;
+
+      const waitList = page.waitForResponse(
+        (res) => /\/categories\/[^/]+\/products\?/.test(res.url()) && res.url().includes(`page=${pageNumber}`),
+        { timeout: 20000 }
+      ).catch(() => null);
+
+      const how = await page.evaluate((n) => {
+        const anchors = [...document.querySelectorAll('a')];
+        let target = anchors.find((a) => a.innerText.trim() === String(n) && a.getAttribute('aria-current') === 'false');
+        if (target) { target.click(); return 'number'; }
+        target = anchors.find((a) => a.innerText.trim() === '다음');
+        if (target && target.getAttribute('aria-disabled') !== 'true') { target.click(); return 'next'; }
+        return null;
+      }, pageNumber);
+      if (!how) break;
+
+      const res = await waitList;
+      let items = [];
+      if (res && res.ok()) {
+        const data = await res.json().catch(() => null);
+        items = data?.simpleProducts || [];
+        if (data?.totalCount) totalCount = data.totalCount;
+      }
+      if (!items.length) {
+        await page.waitForTimeout(1500);
+        console.warn(`[STORE] ${pageNumber}페이지 응답을 읽지 못했습니다 (${res ? res.status() : '응답 없음'}).`);
+        break;
+      }
+      const added = add(items);
+      console.log(`[STORE] ${pageNumber}페이지: ${items.length}개, 신규 ${added}개`);
+      if (!added) break;
+      await page.waitForTimeout(Math.max(config.requestDelayMs, 1500));
+    }
+
+    return { products: [...byId.values()].slice(0, config.maxProducts), totalCount };
+  } catch (error) {
+    await saveDebug(page, debugDir, 'store-all-products');
+    throw error;
+  } finally {
+    await page.close().catch(() => {});
+  }
+}
+
+const STATUS_TEXT = {
+  SALE: '판매 가능',
+  OUTOFSTOCK: '품절',
+  SUSPENSION: '판매중지',
+  CLOSE: '판매종료',
+  PROHIBITION: '판매금지',
+  WAIT: '판매대기'
+};
+
+function productFromSimple(raw, storeUrl) {
+  if (!raw?.id) return null;
+  const salePrice = toNumber(raw.salePrice);
+  const discounted = toNumber(raw.benefitsView?.discountedSalePrice);
+  const status = raw.productStatusType || null;
+  const soldOut = status ? status !== 'SALE' : null;
+  return finalizeProduct({
+    id: String(raw.id),
+    url: `${storeUrl}/products/${raw.id}`,
+    name: raw.dispName || raw.name,
+    currentPrice: discounted ?? salePrice,
+    originalPrice: salePrice,
+    discountRate: toNumber(raw.benefitsView?.discountedRatio),
+    stockQuantity: toNumber(raw.stockQuantity),
+    soldOut,
+    stockStatus: STATUS_TEXT[status] || status || '확인 불가',
+    imageUrl: raw.representativeImageUrl,
+    source: 'store-all'
+  }, storeUrl);
 }
 
 async function scrapeStorePages(context, config, debugDir) {
@@ -74,7 +197,7 @@ async function scrapeStorePages(context, config, debugDir) {
   let emptyOrRepeatedPages = 0;
 
   for (let pageNumber = 1; pageNumber <= config.maxStorePages; pageNumber += 1) {
-    const pageUrl = `${config.storeUrl}/category/e0fdf40a28bd452fbf1266e7f06eb472?st=RECENT&cp=${pageNumber}`;
+    const pageUrl = `${config.storeUrl}/category/ALL?st=RECENT&cp=${pageNumber}`;
     const result = await scrapeListingPage(context, pageUrl, config, debugDir, pageNumber);
 
     let newOnPage = 0;

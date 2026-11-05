@@ -5,6 +5,8 @@ const COLORS = {
   restock: 0x2ecc71,
   discount: 0xf1c40f,
   stock: 0xe67e22,
+  removed: 0x7f8c8d,
+  summary: 0x5865f2,
   baseline: 0x5865f2,
   error: 0xe74c3c,
   recovery: 0x1abc9c,
@@ -25,16 +27,61 @@ export async function sendWebhook(webhookUrl, payload) {
   }
 }
 
+// 2026-11-05: 변경이 적으면 상품 카드를 5개씩 묶어 보내고,
+// 많으면(기본 30건 초과) 한 줄씩 요약한 목록으로 보낸다. (상품 800여 개라 한 건씩 보내면 채널이 도배됨)
 export async function sendProductEvents(webhookUrl, events, config) {
+  const limit = Number.isFinite(Number(config.maxDetailedEvents)) ? Number(config.maxDetailedEvents) : 30;
+  if (events.length <= limit) {
+    for (let i = 0; i < events.length; i += 5) {
+      const embeds = events.slice(i, i + 5).map((event) => buildProductPayload(event, config).embeds[0]);
+      await sendWebhook(webhookUrl, { username: '스마트스토어 모니터', embeds });
+      await sleep(900);
+    }
+    return;
+  }
+
+  const counts = {};
   for (const event of events) {
-    await sendWebhook(webhookUrl, buildProductPayload(event, config));
-    await sleep(700);
+    for (const type of event.types) counts[type] = (counts[type] || 0) + 1;
+  }
+  const label = { new: '새 상품', restock: '리스탁', discount: '가격·할인', stock: '재고', removed: '목록에서 빠짐' };
+  const countText = Object.entries(counts).map(([type, n]) => `${label[type] || type} ${n}건`).join(' · ');
+
+  const lines = events.map((event) => {
+    const name = truncate(event.product.name || `상품 ${event.product.id}`, 60).replace(/[\[\]]/g, '');
+    const change = event.changes.map((c) => c.replace(/^\S+\s/, '')).join(', ');
+    return `• [${name}](${event.product.url}) — ${truncate(change, 160)}`;
+  });
+
+  const chunks = [];
+  let current = '';
+  for (const line of lines) {
+    if ((current + line).length > 3800) { chunks.push(current); current = ''; }
+    current += `${line}\n`;
+  }
+  if (current) chunks.push(current);
+
+  const detectedAt = events[0]?.detectedAt || new Date().toISOString();
+  for (let i = 0; i < chunks.length; i += 1) {
+    await sendWebhook(webhookUrl, {
+      username: '스마트스토어 모니터',
+      embeds: [{
+        title: i === 0 ? `📋 변경 ${events.length}건 요약 (${i + 1}/${chunks.length})` : `📋 변경 요약 (${i + 1}/${chunks.length})`,
+        color: COLORS.summary,
+        description: chunks[i],
+        fields: i === 0 ? [{ name: '종류별', value: countText || '-', inline: false }, { name: '확인 시간', value: formatKoreanTime(detectedAt, config.timezone), inline: false }] : [],
+        footer: { text: `${config.storeName} · SmartStore Monitor` },
+        timestamp: detectedAt
+      }]
+    });
+    await sleep(900);
   }
 }
 
 export function buildProductPayload(event, config) {
   const product = event.product;
-  const primaryType = event.types.includes('restock') ? 'restock'
+  const primaryType = event.types.includes('removed') ? 'removed'
+    : event.types.includes('restock') ? 'restock'
     : event.types.includes('new') ? 'new'
       : event.types.includes('discount') ? 'discount'
         : 'stock';
@@ -43,7 +90,8 @@ export function buildProductPayload(event, config) {
     new: '🆕 새 상품 등록',
     restock: '🟢 재고 리스탁',
     discount: '🏷️ 할인율 변동',
-    stock: '📦 재고 변동'
+    stock: '📦 재고 변동',
+    removed: '⚫ 목록에서 빠짐'
   };
 
   const changeText = event.changes.length ? event.changes.join('\n') : '변경 내용 확인';
