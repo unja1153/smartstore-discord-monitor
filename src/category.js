@@ -85,6 +85,8 @@ export async function scrapeTargets(config, debugDir) {
       const byId = new Map();
       const parts = [];
       for (const categoryId of target.categoryIds) {
+        // 대분류 화면에 다 들어왔으면 중분류는 열지 않는다(요청 수 줄이기).
+        if (parts.length && parts[0].full) break;
         // 최신순 화면을 먼저 열고, 다 안 들어왔으면 낮은 가격순·높은 가격순 화면을 더 열어 합친다(80개까지 빠짐없이).
         const seenHere = new Set();
         let added = 0;
@@ -100,10 +102,11 @@ export async function scrapeTargets(config, debugDir) {
         first = await readCategory(page, config, categoryId, 'RECENT');
         take(first.items);
         await sleep(config.requestDelayMs);
-        if (first.ok && first.totalCount != null && seenHere.size < first.totalCount) {
+        if (config.trySorts !== false && first.ok && first.totalCount != null && seenHere.size < first.totalCount) {
           for (const sort of ['LOW_PRICE', 'HIGH_PRICE']) {
             if (seenHere.size >= first.totalCount) break;
             const more = await readCategory(page, config, categoryId, sort);
+            if (!more.ok) console.log(`[${target.name}] ${categoryId.slice(0, 6)}… ${sort} 화면 못 열음: ${more.problem}`);
             take(more.items);
             await sleep(config.requestDelayMs);
           }
