@@ -74,20 +74,31 @@ try {
         return [p.id, s];
       }));
       next.initialized = true;
+      next.sig = t.categoryIds.join(',');
       state.targets[t.key] = next;
       summary.push(`${t.name} ${r.products.length}개${r.complete ? '' : ' (일부)'}`);
       if (config.notifyOnBaseline) {
-        await sendWebhook(hookFor(t), { username, embeds: [{ title: `✅ «${t.name}» 모니터링 시작`, color: 0x5865f2, description: `상품 ${r.products.length}개를 기준으로 저장했습니다. 다음 확인부터 바뀐 것만 이 방에 알립니다.`, fields: [{ name: '확인 범위', value: r.complete ? '이 카테고리 전체' : '일부(화면 몇 곳을 못 읽음)', inline: true }, { name: '저장 시간', value: formatKoreanTime(at, config.timezone), inline: true }], timestamp: at }] }).catch((e) => console.error(`${t.name} 시작 알림 실패: ${errorToString(e)}`));
+        await sendWebhook(hookFor(t), { username, embeds: [{ title: `✅ «${t.name}» 모니터링 시작`, color: 0x5865f2, description: `상품 ${r.products.length}개를 기준으로 저장했습니다. 다음 확인부터 바뀐 것만 이 방에 알립니다.`, fields: [{ name: '확인 범위', value: r.complete ? '이 카테고리 전체' : (r.failed.length ? `일부(화면 ${r.failed.length}곳을 못 열음)` : '거의 전부(상품이 많은 화면 몇 곳은 일부만)'), inline: true }, { name: '저장 시간', value: formatKoreanTime(at, config.timezone), inline: true }], timestamp: at }] }).catch((e) => console.error(`${t.name} 시작 알림 실패: ${errorToString(e)}`));
         await new Promise((res) => setTimeout(res, 700));
       }
       continue;
     }
 
+    // 설정(읽는 화면 목록)이 바뀐 뒤 처음 돌 때는, 새로 보이는 상품을 «새 상품»으로 알리지 않고 조용히 기준값에 더한다.
+    const sig = t.categoryIds.join(',');
+    const quietNew = prev.sig !== sig;
+    next.sig = sig;
     const events = [];
     const seen = new Set();
     for (const raw of r.products) {
       seen.add(raw.id);
       const before = prev.products[raw.id] || null;
+      if (!before && quietNew) {
+        const s = { ...raw, firstSeenAt: at, lastChangedAt: at };
+        delete s.source;
+        next.products[raw.id] = s;
+        continue;
+      }
       const current = mergeForComparison(before, raw);
       delete current.source;
       current.firstSeenAt = before?.firstSeenAt || at;
@@ -101,7 +112,7 @@ try {
       }
       next.products[raw.id] = current;
     }
-    if (r.complete) {
+    if (r.complete && !quietNew) {
       for (const [id, before] of Object.entries(prev.products)) {
         if (seen.has(id)) continue;
         delete next.products[id];

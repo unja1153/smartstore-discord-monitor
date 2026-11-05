@@ -74,7 +74,14 @@
       "key": "비닐",
       "name": "비닐",
       "categoryIds": [
-        "43e5208719dd436abaafea4753084258"
+        "43e5208719dd436abaafea4753084258",
+        "0efaa5bdfff04cdfaf7c38ec29910750",
+        "016f67acc6ac4187902d4ff75addc4b3",
+        "a6b36838a8774d4491b225e02bbf0213",
+        "f5aaf61071f84abc9defb665807c04cb",
+        "b7476ca186104da0a13e8730721090b7",
+        "789fb5e20cfb47819f158a4c0d7314f5",
+        "3c0b415bf4074f6b8985e9073cee982f"
       ],
       "discordChannelId": "1567785691092619294"
     },
@@ -82,7 +89,10 @@
       "key": "진공·수축필름",
       "name": "진공·수축필름",
       "categoryIds": [
-        "aec1736203114f1eb1e68f8c333681db"
+        "aec1736203114f1eb1e68f8c333681db",
+        "c7867ed7de154c9db5ec17435c7da0a8",
+        "e1eaecc205744ae99a884e0f64b13aad",
+        "33495eb8ef6842d584e3dfb875144c51"
       ],
       "discordChannelId": "1567785698075873415"
     },
@@ -108,7 +118,14 @@
       "key": "주방·매장용품",
       "name": "주방·매장용품",
       "categoryIds": [
-        "e0fdf40a28bd452fbf1266e7f06eb472"
+        "e0fdf40a28bd452fbf1266e7f06eb472",
+        "8cf3f13e719d4e8293c641e4c0b54670",
+        "5e1bba56131949b8a43c234065a02c57",
+        "2b0dedde2dbb4e478781236e38ab9c9d",
+        "7657986abbc74985972b751ba4d21d57",
+        "6e34cb4353f2404a8365bd7d9017610c",
+        "b6585128c22e43c6a25d1bfb909078ae",
+        "da19abafc53746b6a70a75a9ad85d744"
       ],
       "discordChannelId": "1567785711967674519"
     },
@@ -116,7 +133,14 @@
       "key": "식자재",
       "name": "식자재",
       "categoryIds": [
-        "9b9e85e3f03e41b0b3cf4ebd280f90b8"
+        "9b9e85e3f03e41b0b3cf4ebd280f90b8",
+        "5c54f279ca874ad6bb5dc16d4fed7423",
+        "b1007bbdb4164168a0587e8e0391b1d4",
+        "6831db0fc2bd48b88bce96ba75654a8f",
+        "54f3b20c27b44853b7b8c2ba45a3d06d",
+        "4d8d8e00c99c4f08b4c65f968f8c33b3",
+        "259b26d04e1c45a2a09616ed64e147aa",
+        "e90f0bcab7684383872d98e06a99f3a7"
       ],
       "discordChannelId": "1567785719303241788"
     },
@@ -124,7 +148,9 @@
       "key": "기계",
       "name": "기계",
       "categoryIds": [
-        "60a02a7b27c14e25873e4332fa909daf"
+        "60a02a7b27c14e25873e4332fa909daf",
+        "f835091f3b5848c6a5064598b05eb867",
+        "6506fd487a6a4a96a2f196c94469846b"
       ],
       "discordChannelId": "1567785728019275787"
     },
@@ -132,9 +158,13 @@
       "key": "이벤트",
       "name": "이벤트",
       "categoryIds": [
-        "922caad3510546389c0cd062e923d347"
+        "922caad3510546389c0cd062e923d347",
+        "b052d5754a1b4f81868f9078c7773f1e",
+        "99b1b25fe63b4b4f9930ab02d51b5c46",
+        "2638471a3c6b4819a9b0d609443de05b"
       ],
       "discordChannelId": "1567785734696341554"
     }
-  ]
+  ],
+  "trySorts": false
 }
