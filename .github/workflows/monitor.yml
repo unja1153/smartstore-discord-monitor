@@ -13,9 +13,9 @@ on:
           - test-webhook
           - reset-baseline
           - probe
-  # 2026-11-05: 자동 실행은 사무실 PC(Aside 루틴, 평일 08:00)로 옮김. GitHub 서버에서는 네이버가 2페이지를 막아서.
-  # schedule:
-  # - cron: '0 0 * * *'
+  # 2026-11-05: 경쟁사(카페24) 타사 가격추적 — 평일 오전 8시(한국) = 세계표준시 일~목 23시. GitHub 사정으로 늦어질 수 있음.
+  schedule:
+  - cron: '0 23 * * 0-4'
 
 permissions:
   contents: write
@@ -27,7 +27,7 @@ concurrency:
 jobs:
   monitor:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 180
     container:
       image: mcr.microsoft.com/playwright:v1.62.0-noble
       options: --user 1001
