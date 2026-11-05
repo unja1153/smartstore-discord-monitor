@@ -9,6 +9,7 @@
 // 기준값: data/state.json(version 2, targets[가게].products), 옵션: data/options.json(products["가게:상품번호"])
 // ============================================================================
 import zlib from 'node:zlib';
+import { execSync } from 'node:child_process';
 import { loadConfig, paths } from './src/config.js';
 import { readJson, writeJsonAtomic, nowIso, errorToString } from './src/utils.js';
 
@@ -216,11 +217,14 @@ for (const store of config.competitors) {
   for (const e of events) history.push({ at, target: store.name, types: e.types, id: e.product.id, name: e.product.name, url: e.product.url, price: e.product.currentPrice ?? null, stock: e.product.stockStatus ?? null, changes: e.changes });
   console.log(`[${store.name}] 변경 ${events.length}건`);
   for (const e of events.slice(0, 20)) console.log(`  - ${e.product.name}: ${e.changes.join(' / ')}`);
+  // 2026-11-05: 가게 하나를 끝낼 때마다 바로 저장·올리기(업따 시스템 화면에 읽은 가게부터 보이도록)
+  saveAll(false);
+  pushNow(`타사 가격추적: ${store.name} 확인`);
 }
 
-if (!probe) {
-  state.lastRun = { at, summary, failed: problems, source: 'github' };
-  state.failureCount = problems.length ? (state.failureCount || 0) + 1 : 0;
+function saveAll(final) {
+  if (probe) return;
+  state.lastRun = { at, summary: [...summary], failed: [...problems], source: 'github', running: !final };
   state.heartbeatMonth = at.slice(0, 7);
   writeJsonAtomic(paths.state, state);
   opts.mode = 'competitors'; opts.updatedAt = at;
@@ -228,9 +232,25 @@ if (!probe) {
   if (history.length) {
     const file = paths.state.replace(/state\.json$/, 'events.json');
     const h = readJson(file, { version: 1, events: [] });
-    h.events = [...history, ...(h.events || [])].slice(0, 2000);
+    const keep = (h.events || []).filter((e) => e.at !== at);
+    h.events = [...history, ...keep].slice(0, 2000);
     writeJsonAtomic(file, h);
   }
+}
+function pushNow(msg) {
+  if (probe || !process.env.GITHUB_ACTIONS) return;
+  try {
+    execSync('git config user.name "smartstore-monitor[bot]" && git config user.email "smartstore-monitor[bot]@users.noreply.github.com"', { stdio: 'ignore' });
+    execSync('git add data/', { stdio: 'ignore' });
+    try { execSync('git diff --cached --quiet', { stdio: 'ignore' }); return; } catch { /* 변경 있음 */ }
+    execSync(`git commit -m "${msg.replace(/"/g, '')} [skip ci]"`, { stdio: 'ignore' });
+    execSync('git pull --rebase origin main && git push', { stdio: 'ignore' });
+  } catch (e) { console.log(`중간 저장 실패(끝에 한 번에 저장): ${e.message}`); }
+}
+
+if (!probe) {
+  state.failureCount = problems.length ? (state.failureCount || 0) + 1 : 0;
+  saveAll(true);
 }
 console.log(`완료: ${summary.join(', ')}${problems.length ? ` / 문제: ${problems.join(' / ')}` : ''}`);
 if (problems.length && !summary.length) process.exitCode = 1;
