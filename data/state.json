@@ -34456,7 +34456,7 @@
       "name": "대성팩",
       "url": "https://daesungpack.com",
       "initialized": true,
-      "lastCheckAt": "2026-11-05T09:02:44.123Z",
+      "lastCheckAt": "2026-11-06T03:04:43.787Z",
       "count": 4006,
       "sitemapCount": 4006,
       "complete": true,
@@ -48620,52 +48620,52 @@
           "id": "1503",
           "url": "https://daesungpack.com/product/detail.html?product_no=1503",
           "name": "퓨어 바구니 2호",
-          "currentPrice": 3200,
-          "originalPrice": 3200,
+          "currentPrice": 3300,
+          "originalPrice": 3300,
           "discountRate": null,
           "stockQuantity": null,
           "soldOut": false,
           "stockStatus": "판매 가능",
           "optCount": 2,
-          "optMinPrice": 3200,
-          "optMaxPrice": 96000,
+          "optMinPrice": 3300,
+          "optMaxPrice": 99000,
           "optSoldOut": 0,
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "1504": {
           "id": "1504",
           "url": "https://daesungpack.com/product/detail.html?product_no=1504",
           "name": "퓨어 바구니 3호",
-          "currentPrice": 3500,
-          "originalPrice": 3500,
+          "currentPrice": 3600,
+          "originalPrice": 3600,
           "discountRate": null,
           "stockQuantity": null,
           "soldOut": false,
           "stockStatus": "판매 가능",
           "optCount": 2,
-          "optMinPrice": 3500,
-          "optMaxPrice": 105000,
+          "optMinPrice": 3600,
+          "optMaxPrice": 108000,
           "optSoldOut": 0,
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "1505": {
           "id": "1505",
           "url": "https://daesungpack.com/product/detail.html?product_no=1505",
           "name": "퓨어 바구니 4호",
-          "currentPrice": 3850,
-          "originalPrice": 3850,
+          "currentPrice": 3950,
+          "originalPrice": 3950,
           "discountRate": null,
           "stockQuantity": null,
           "soldOut": false,
           "stockStatus": "판매 가능",
           "optCount": 2,
-          "optMinPrice": 3850,
-          "optMaxPrice": 115500,
+          "optMinPrice": 3950,
+          "optMaxPrice": 118500,
           "optSoldOut": 0,
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "1517": {
           "id": "1517",
@@ -49973,52 +49973,52 @@
           "id": "1689",
           "url": "https://daesungpack.com/product/detail.html?product_no=1689",
           "name": "낮은 퓨어 바구니 4호",
-          "currentPrice": 3850,
-          "originalPrice": 3850,
+          "currentPrice": 3950,
+          "originalPrice": 3950,
           "discountRate": null,
           "stockQuantity": null,
           "soldOut": false,
           "stockStatus": "판매 가능",
           "optCount": 2,
-          "optMinPrice": 3850,
-          "optMaxPrice": 115500,
+          "optMinPrice": 3950,
+          "optMaxPrice": 118500,
           "optSoldOut": 0,
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "1690": {
           "id": "1690",
           "url": "https://daesungpack.com/product/detail.html?product_no=1690",
           "name": "낮은 퓨어 바구니 3호",
-          "currentPrice": 3500,
-          "originalPrice": 3500,
+          "currentPrice": 3600,
+          "originalPrice": 3600,
           "discountRate": null,
           "stockQuantity": null,
           "soldOut": false,
           "stockStatus": "판매 가능",
           "optCount": 2,
-          "optMinPrice": 3500,
-          "optMaxPrice": 105000,
+          "optMinPrice": 3600,
+          "optMaxPrice": 108000,
           "optSoldOut": 0,
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "1691": {
           "id": "1691",
           "url": "https://daesungpack.com/product/detail.html?product_no=1691",
           "name": "낮은 퓨어 바구니 2호",
-          "currentPrice": 3200,
-          "originalPrice": 3200,
+          "currentPrice": 3300,
+          "originalPrice": 3300,
           "discountRate": null,
           "stockQuantity": null,
           "soldOut": false,
           "stockStatus": "판매 가능",
           "optCount": 2,
-          "optMinPrice": 3200,
-          "optMaxPrice": 96000,
+          "optMinPrice": 3300,
+          "optMaxPrice": 99000,
           "optSoldOut": 0,
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "1692": {
           "id": "1692",
@@ -67026,7 +67026,7 @@
           "optMaxPrice": 133900,
           "optSoldOut": 120,
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "4193": {
           "id": "4193",
@@ -69292,10 +69292,10 @@
           "stockStatus": "판매 가능",
           "optCount": 246,
           "optMinPrice": 81500,
-          "optMaxPrice": 136100,
+          "optMaxPrice": 138200,
           "optSoldOut": 98,
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "6331": {
           "id": "6331",
@@ -69309,10 +69309,10 @@
           "stockStatus": "판매 가능",
           "optCount": 246,
           "optMinPrice": 81500,
-          "optMaxPrice": 136100,
+          "optMaxPrice": 138200,
           "optSoldOut": 100,
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "6334": {
           "id": "6334",
@@ -69343,10 +69343,10 @@
           "stockStatus": "판매 가능",
           "optCount": 224,
           "optMinPrice": 49700,
-          "optMaxPrice": 75800,
+          "optMaxPrice": 76700,
           "optSoldOut": 56,
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "6342": {
           "id": "6342",
@@ -69757,10 +69757,10 @@
           "stockStatus": "판매 가능",
           "optCount": 224,
           "optMinPrice": 49700,
-          "optMaxPrice": 75800,
+          "optMaxPrice": 76700,
           "optSoldOut": 56,
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "6415": {
           "id": "6415",
@@ -72856,10 +72856,10 @@
           "stockStatus": "판매 가능",
           "optCount": 115,
           "optMinPrice": 71000,
-          "optMaxPrice": 139500,
+          "optMaxPrice": 140000,
           "optSoldOut": 24,
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "7701": {
           "id": "7701",
@@ -72873,10 +72873,10 @@
           "stockStatus": "판매 가능",
           "optCount": 103,
           "optMinPrice": 71000,
-          "optMaxPrice": 140000,
+          "optMaxPrice": 140750,
           "optSoldOut": 0,
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "7705": {
           "id": "7705",
@@ -107931,7 +107931,8 @@
   "lastRun": {
     "at": "2026-11-06T03:04:43.787Z",
     "summary": [
-      "다담아몰 2362개 · 변경 49건"
+      "다담아몰 2362개 · 변경 49건",
+      "대성팩 4006개 · 변경 13건"
     ],
     "failed": [],
     "source": "github",
