@@ -1,4 +1,740 @@
 {
   "version": 1,
-  "events": []
+  "events": [
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "115",
+      "name": "목단노리개",
+      "url": "https://9062.co.kr/product/detail.html?product_no=115",
+      "price": 5500,
+      "stock": "955개",
+      "changes": [
+        "📦 재고 수량: 956개 → 955개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "399",
+      "name": "업소용 진공필름 진공비닐 100장 두께60(20x30) 전자렌지가능",
+      "url": "https://9062.co.kr/product/detail.html?product_no=399",
+      "price": 5800,
+      "stock": "3,928개",
+      "changes": [
+        "📦 재고 수량: 3,948개 → 3,928개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "401",
+      "name": "업소용 진공필름 진공비닐 100장 두께60(25x35) 전자렌지가능",
+      "url": "https://9062.co.kr/product/detail.html?product_no=401",
+      "price": 7900,
+      "stock": "996,179개",
+      "changes": [
+        "📦 재고 수량: 996,184개 → 996,179개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "669",
+      "name": "크록스 미트페이퍼 핑크 2롤 육즙제거 흡수지",
+      "url": "https://9062.co.kr/product/detail.html?product_no=669",
+      "price": 46000,
+      "stock": "98,265개",
+      "changes": [
+        "📦 재고 수량: 98,266개 → 98,265개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "681",
+      "name": "고기엔참소스 20g / 200개(박스)",
+      "url": "https://9062.co.kr/product/detail.html?product_no=681",
+      "price": 15200,
+      "stock": "91,109개",
+      "changes": [
+        "📦 재고 수량: 91,116개 → 91,109개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "683",
+      "name": "고기엔 참소스 300g / 20개(박스)",
+      "url": "https://9062.co.kr/product/detail.html?product_no=683",
+      "price": 27500,
+      "stock": "98,467개",
+      "changes": [
+        "📦 재고 수량: 98,468개 → 98,467개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "897",
+      "name": "흡수패드 소박스 인박스 10x15cm 500매 / 박스",
+      "url": "https://9062.co.kr/product/detail.html?product_no=897",
+      "price": 12300,
+      "stock": "98,375개",
+      "changes": [
+        "📦 재고 수량: 98,384개 → 98,375개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "1094",
+      "name": "다용도보냉백(SC4) 갈색",
+      "url": "https://9062.co.kr/product/detail.html?product_no=1094",
+      "price": 2050,
+      "stock": "93,494개",
+      "changes": [
+        "📦 재고 수량: 93,499개 → 93,494개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "1095",
+      "name": "다용도보냉백(SC1) 검정",
+      "url": "https://9062.co.kr/product/detail.html?product_no=1095",
+      "price": 1750,
+      "stock": "82,138개",
+      "changes": [
+        "📦 재고 수량: 82,183개 → 82,138개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "1460",
+      "name": "정육 업소용 열 수축포장 진공필름 25x35 100장",
+      "url": "https://9062.co.kr/product/detail.html?product_no=1460",
+      "price": 29000,
+      "stock": "99,251개",
+      "changes": [
+        "📦 재고 수량: 99,252개 → 99,251개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "2110",
+      "name": "모닝랩 400mm 6롤 / 박스",
+      "url": "https://9062.co.kr/product/detail.html?product_no=2110",
+      "price": 106500,
+      "stock": "9,979개",
+      "changes": [
+        "📦 재고 수량: 9,980개 → 9,979개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "2889",
+      "name": "인테리어 인조 조화 주황꽃 100개",
+      "url": "https://9062.co.kr/product/detail.html?product_no=2889",
+      "price": 13000,
+      "stock": "99,572개",
+      "changes": [
+        "📦 재고 수량: 99,573개 → 99,572개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "3080",
+      "name": "보온 보냉가방 SC3 남색 1개 쿨러백 도시락 캠핑",
+      "url": "https://9062.co.kr/product/detail.html?product_no=3080",
+      "price": 1850,
+      "stock": "96,591개",
+      "changes": [
+        "📦 재고 수량: 96,601개 → 96,591개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "3513",
+      "name": "스킨포장 정육용기 TS30 221730",
+      "url": "https://9062.co.kr/product/detail.html?product_no=3513",
+      "price": 250000,
+      "stock": "99,989개",
+      "changes": [
+        "📦 재고 수량: 99,990개 → 99,989개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "3694",
+      "name": "소문난 육회소스 고추장맛 40g / 100개(박스)",
+      "url": "https://9062.co.kr/product/detail.html?product_no=3694",
+      "price": 60000,
+      "stock": "99,704개",
+      "changes": [
+        "📦 재고 수량: 99,705개 → 99,704개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "3695",
+      "name": "소문난 육회소스 간장맛 40g / 100개(박스)",
+      "url": "https://9062.co.kr/product/detail.html?product_no=3695",
+      "price": 60000,
+      "stock": "98,896개",
+      "changes": [
+        "📦 재고 수량: 98,897개 → 98,896개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "4083",
+      "name": "정육스티커 X21-2 한우 육회/육사시미 스티커 1000매",
+      "url": "https://9062.co.kr/product/detail.html?product_no=4083",
+      "price": 16800,
+      "stock": "99,731개",
+      "changes": [
+        "📦 재고 수량: 99,732개 → 99,731개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "4298",
+      "name": "조화 고기장식 인조꽃 나뭇잎3잎 100개",
+      "url": "https://9062.co.kr/product/detail.html?product_no=4298",
+      "price": 13000,
+      "stock": "99,433개",
+      "changes": [
+        "📦 재고 수량: 99,434개 → 99,433개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "4423",
+      "name": "우리식품 톡쏘는 겨자 참소스 20g / 200개(박스)",
+      "url": "https://9062.co.kr/product/detail.html?product_no=4423",
+      "price": 20800,
+      "stock": "97,343개",
+      "changes": [
+        "📦 재고 수량: 97,344개 → 97,343개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "4474",
+      "name": "핑크허브솔트 3g / 200개(박스)",
+      "url": "https://9062.co.kr/product/detail.html?product_no=4474",
+      "price": 20000,
+      "stock": "98,595개",
+      "changes": [
+        "📦 재고 수량: 98,596개 → 98,595개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "4578",
+      "name": "몬트리얼 스테이크 씨즈닝 4g / 200개(박스)",
+      "url": "https://9062.co.kr/product/detail.html?product_no=4578",
+      "price": 35500,
+      "stock": "99,598개",
+      "changes": [
+        "📦 재고 수량: 99,599개 → 99,598개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "4581",
+      "name": "뭉티기소스 50g 100개 육회 육사시미소스",
+      "url": "https://9062.co.kr/product/detail.html?product_no=4581",
+      "price": 70000,
+      "stock": "99,417개",
+      "changes": [
+        "📦 재고 수량: 99,418개 → 99,417개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "4582",
+      "name": "나이스 육회소스 간장맛 30g / 100개(박스)",
+      "url": "https://9062.co.kr/product/detail.html?product_no=4582",
+      "price": 48000,
+      "stock": "99,584개",
+      "changes": [
+        "📦 재고 수량: 99,586개 → 99,584개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "4585",
+      "name": "와사비솔트 3g / 1000개(박스)",
+      "url": "https://9062.co.kr/product/detail.html?product_no=4585",
+      "price": 71000,
+      "stock": "99,875개",
+      "changes": [
+        "📦 재고 수량: 99,876개 → 99,875개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "4616",
+      "name": "스킨진공포장기 400k 전용필름 2롤 270x200",
+      "url": "https://9062.co.kr/product/detail.html?product_no=4616",
+      "price": 297000,
+      "stock": "99,721개",
+      "changes": [
+        "📦 재고 수량: 99,722개 → 99,721개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "new"
+      ],
+      "id": "4662",
+      "name": "고주파가방 런치도시락백 민트 SA3 1개",
+      "url": "https://9062.co.kr/product/detail.html?product_no=4662",
+      "price": 480,
+      "stock": "NaN개",
+      "changes": [
+        "🆕 새 상품이 보입니다."
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "4680",
+      "name": "샤브샤브육수 50g 100개 밀푀유나베 소스 육수",
+      "url": "https://9062.co.kr/product/detail.html?product_no=4680",
+      "price": 54000,
+      "stock": "99,967개",
+      "changes": [
+        "📦 재고 수량: 99,968개 → 99,967개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "4689",
+      "name": "움트리 육류n 생와사비랑  5g / 100개(묶음)",
+      "url": "https://9062.co.kr/product/detail.html?product_no=4689",
+      "price": 15000,
+      "stock": "99,262개",
+      "changes": [
+        "📦 재고 수량: 99,263개 → 99,262개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "4725",
+      "name": "알루미늄 스킨포장용기 221735 SKA-R223 105개",
+      "url": "https://9062.co.kr/product/detail.html?product_no=4725",
+      "price": 76000,
+      "stock": "99,995개",
+      "changes": [
+        "📦 재고 수량: 99,996개 → 99,995개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "4907",
+      "name": "인조꽃 고기장식 야생화 핑크 100개",
+      "url": "https://9062.co.kr/product/detail.html?product_no=4907",
+      "price": 13000,
+      "stock": "99,914개",
+      "changes": [
+        "📦 재고 수량: 99,915개 → 99,914개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "4908",
+      "name": "인조꽃 고기장식 야생화 흰색 100개",
+      "url": "https://9062.co.kr/product/detail.html?product_no=4908",
+      "price": 13000,
+      "stock": "99,779개",
+      "changes": [
+        "📦 재고 수량: 99,780개 → 99,779개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "4978",
+      "name": "정육스티커 한돈타원(들판) DP-08 1000장",
+      "url": "https://9062.co.kr/product/detail.html?product_no=4978",
+      "price": 16500,
+      "stock": "99,929개",
+      "changes": [
+        "📦 재고 수량: 99,930개 → 99,929개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "new"
+      ],
+      "id": "5040",
+      "name": "B형 부직포가방 S-2216 6입용 1장",
+      "url": "https://9062.co.kr/product/detail.html?product_no=5040",
+      "price": 2000,
+      "stock": "3,852개",
+      "changes": [
+        "🆕 새 상품이 보입니다."
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "5574",
+      "name": "소금간 스티커 타원 1000장/묶음",
+      "url": "https://9062.co.kr/product/detail.html?product_no=5574",
+      "price": 13500,
+      "stock": "99,989개",
+      "changes": [
+        "📦 재고 수량: 99,994개 → 99,989개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "5769",
+      "name": "조화 삼색잎분홍겹꽃 100개",
+      "url": "https://9062.co.kr/product/detail.html?product_no=5769",
+      "price": 12000,
+      "stock": "99,984개",
+      "changes": [
+        "📦 재고 수량: 99,985개 → 99,984개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "5878",
+      "name": "LA25-1 la갈비 띠지 금박 500매",
+      "url": "https://9062.co.kr/product/detail.html?product_no=5878",
+      "price": 14000,
+      "stock": "99,928개",
+      "changes": [
+        "📦 재고 수량: 99,929개 → 99,928개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "new"
+      ],
+      "id": "5904",
+      "name": "스킨포장 보냉지함 4입(소) 전용 고급보냉가방 3종",
+      "url": "https://9062.co.kr/product/detail.html?product_no=5904",
+      "price": 7800,
+      "stock": "판매 가능",
+      "changes": [
+        "🆕 새 상품이 보입니다."
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "6009",
+      "name": "인테리어 인조 조화 노랑꽃 100개",
+      "url": "https://9062.co.kr/product/detail.html?product_no=6009",
+      "price": 13000,
+      "stock": "99,783개",
+      "changes": [
+        "📦 재고 수량: 99,784개 → 99,783개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "6261",
+      "name": "스킨포장 지함박스 NEW 자석형 초록 (2417 4입포장)",
+      "url": "https://9062.co.kr/product/detail.html?product_no=6261",
+      "price": 11000,
+      "stock": "7,672개",
+      "changes": [
+        "📦 재고 수량: 7,675개 → 7,672개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "6264",
+      "name": "금색 테두리 PET 채반 4호",
+      "url": "https://9062.co.kr/product/detail.html?product_no=6264",
+      "price": 1700,
+      "stock": "99,179개",
+      "changes": [
+        "📦 재고 수량: 99,180개 → 99,179개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "6265",
+      "name": "금색 테두리 PET 채반 3호",
+      "url": "https://9062.co.kr/product/detail.html?product_no=6265",
+      "price": 1400,
+      "stock": "97,373개",
+      "changes": [
+        "📦 재고 수량: 97,374개 → 97,373개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "6515",
+      "name": "오공 OPP 80M 접착 투명 박스테이프 40개/박스",
+      "url": "https://9062.co.kr/product/detail.html?product_no=6515",
+      "price": 50000,
+      "stock": "9,981개",
+      "changes": [
+        "📦 재고 수량: 9,982개 → 9,981개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "6590",
+      "name": "겹보보자기 브라운 중",
+      "url": "https://9062.co.kr/product/detail.html?product_no=6590",
+      "price": 4800,
+      "stock": "978개",
+      "changes": [
+        "📦 재고 수량: 979개 → 978개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "6696",
+      "name": "우리식품 저당 참 소스 285g /20개(박스)",
+      "url": "https://9062.co.kr/product/detail.html?product_no=6696",
+      "price": 45000,
+      "stock": "99,990개",
+      "changes": [
+        "📦 재고 수량: 99,991개 → 99,990개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "6961",
+      "name": "흡수패드 검정 소박스 인박스 10x15cm 500매 / 박스",
+      "url": "https://9062.co.kr/product/detail.html?product_no=6961",
+      "price": 14000,
+      "stock": "9,921개",
+      "changes": [
+        "📦 재고 수량: 9,925개 → 9,921개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "stock"
+      ],
+      "id": "6989",
+      "name": "친환경 아이스팩 젤 완제품 G3 15x20 60개",
+      "url": "https://9062.co.kr/product/detail.html?product_no=6989",
+      "price": 14400,
+      "stock": "99,742개",
+      "changes": [
+        "📦 재고 수량: 99,743개 → 99,742개"
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "new"
+      ],
+      "id": "7141",
+      "name": "아크릴 디지털 정육가격표 소 (원목무늬)",
+      "url": "https://9062.co.kr/product/detail.html?product_no=7141",
+      "price": 6200,
+      "stock": "99,998개",
+      "changes": [
+        "🆕 새 상품이 보입니다."
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "new"
+      ],
+      "id": "7143",
+      "name": "디지털 정육가격표 소 (검정)",
+      "url": "https://9062.co.kr/product/detail.html?product_no=7143",
+      "price": 11800,
+      "stock": "99,998개",
+      "changes": [
+        "🆕 새 상품이 보입니다."
+      ]
+    },
+    {
+      "at": "2026-11-06T03:04:43.787Z",
+      "target": "다담아몰",
+      "types": [
+        "new"
+      ],
+      "id": "7144",
+      "name": "박용태 고객님 261105(다담아) 제주추가배송비",
+      "url": "https://9062.co.kr/product/detail.html?product_no=7144",
+      "price": 17000,
+      "stock": "0개",
+      "changes": [
+        "🆕 새 상품이 보입니다."
+      ]
+    }
+  ]
 }

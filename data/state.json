@@ -6,9 +6,9 @@
       "name": "다담아몰",
       "url": "https://9062.co.kr",
       "initialized": true,
-      "lastCheckAt": "2026-11-05T09:02:44.123Z",
-      "count": 2357,
-      "sitemapCount": 2357,
+      "lastCheckAt": "2026-11-06T03:04:43.787Z",
+      "count": 2362,
+      "sitemapCount": 2362,
       "complete": true,
       "products": {
         "22": {
@@ -187,11 +187,11 @@
           "currentPrice": 5500,
           "originalPrice": 5500,
           "discountRate": null,
-          "stockQuantity": 956,
+          "stockQuantity": 955,
           "soldOut": false,
-          "stockStatus": "956개",
+          "stockStatus": "955개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "116": {
           "id": "116",
@@ -1974,11 +1974,11 @@
           "currentPrice": 5800,
           "originalPrice": 5800,
           "discountRate": null,
-          "stockQuantity": 3948,
+          "stockQuantity": 3928,
           "soldOut": false,
-          "stockStatus": "3,948개",
+          "stockStatus": "3,928개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "401": {
           "id": "401",
@@ -1987,11 +1987,11 @@
           "currentPrice": 7900,
           "originalPrice": 7900,
           "discountRate": null,
-          "stockQuantity": 996184,
+          "stockQuantity": 996179,
           "soldOut": false,
-          "stockStatus": "996,184개",
+          "stockStatus": "996,179개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "402": {
           "id": "402",
@@ -3826,11 +3826,11 @@
           "currentPrice": 46000,
           "originalPrice": 46000,
           "discountRate": null,
-          "stockQuantity": 98266,
+          "stockQuantity": 98265,
           "soldOut": false,
-          "stockStatus": "98,266개",
+          "stockStatus": "98,265개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "670": {
           "id": "670",
@@ -3908,11 +3908,11 @@
           "currentPrice": 15200,
           "originalPrice": 15200,
           "discountRate": null,
-          "stockQuantity": 91116,
+          "stockQuantity": 91109,
           "soldOut": false,
-          "stockStatus": "91,116개",
+          "stockStatus": "91,109개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "683": {
           "id": "683",
@@ -3921,11 +3921,11 @@
           "currentPrice": 27500,
           "originalPrice": 27500,
           "discountRate": null,
-          "stockQuantity": 98468,
+          "stockQuantity": 98467,
           "soldOut": false,
-          "stockStatus": "98,468개",
+          "stockStatus": "98,467개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "688": {
           "id": "688",
@@ -5668,11 +5668,11 @@
           "currentPrice": 12300,
           "originalPrice": 12300,
           "discountRate": null,
-          "stockQuantity": 98384,
+          "stockQuantity": 98375,
           "soldOut": false,
-          "stockStatus": "98,384개",
+          "stockStatus": "98,375개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "898": {
           "id": "898",
@@ -7105,11 +7105,11 @@
           "currentPrice": 2050,
           "originalPrice": 2050,
           "discountRate": null,
-          "stockQuantity": 93499,
+          "stockQuantity": 93494,
           "soldOut": false,
-          "stockStatus": "93,499개",
+          "stockStatus": "93,494개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "1095": {
           "id": "1095",
@@ -7118,11 +7118,11 @@
           "currentPrice": 1750,
           "originalPrice": 1750,
           "discountRate": null,
-          "stockQuantity": 82183,
+          "stockQuantity": 82138,
           "soldOut": false,
-          "stockStatus": "82,183개",
+          "stockStatus": "82,138개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "1096": {
           "id": "1096",
@@ -8534,11 +8534,11 @@
           "currentPrice": 29000,
           "originalPrice": 29000,
           "discountRate": null,
-          "stockQuantity": 99252,
+          "stockQuantity": 99251,
           "soldOut": false,
-          "stockStatus": "99,252개",
+          "stockStatus": "99,251개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "1461": {
           "id": "1461",
@@ -13664,11 +13664,11 @@
           "currentPrice": 106500,
           "originalPrice": 106500,
           "discountRate": null,
-          "stockQuantity": 9980,
+          "stockQuantity": 9979,
           "soldOut": false,
-          "stockStatus": "9,980개",
+          "stockStatus": "9,979개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "2115": {
           "id": "2115",
@@ -16646,11 +16646,11 @@
           "currentPrice": 13000,
           "originalPrice": 16000,
           "discountRate": 19,
-          "stockQuantity": 99573,
+          "stockQuantity": 99572,
           "soldOut": false,
-          "stockStatus": "99,573개",
+          "stockStatus": "99,572개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "2890": {
           "id": "2890",
@@ -16924,11 +16924,11 @@
           "currentPrice": 1850,
           "originalPrice": 1850,
           "discountRate": null,
-          "stockQuantity": 96601,
+          "stockQuantity": 96591,
           "soldOut": false,
-          "stockStatus": "96,601개",
+          "stockStatus": "96,591개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "3082": {
           "id": "3082",
@@ -20339,11 +20339,11 @@
           "currentPrice": 250000,
           "originalPrice": 250000,
           "discountRate": null,
-          "stockQuantity": 99990,
+          "stockQuantity": 99989,
           "soldOut": false,
-          "stockStatus": "99,990개",
+          "stockStatus": "99,989개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "3514": {
           "id": "3514",
@@ -20828,11 +20828,11 @@
           "currentPrice": 60000,
           "originalPrice": 60000,
           "discountRate": null,
-          "stockQuantity": 99705,
+          "stockQuantity": 99704,
           "soldOut": false,
-          "stockStatus": "99,705개",
+          "stockStatus": "99,704개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "3695": {
           "id": "3695",
@@ -20841,11 +20841,11 @@
           "currentPrice": 60000,
           "originalPrice": 60000,
           "discountRate": null,
-          "stockQuantity": 98897,
+          "stockQuantity": 98896,
           "soldOut": false,
-          "stockStatus": "98,897개",
+          "stockStatus": "98,896개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "3696": {
           "id": "3696",
@@ -21916,11 +21916,11 @@
           "currentPrice": 16800,
           "originalPrice": 16800,
           "discountRate": null,
-          "stockQuantity": 99732,
+          "stockQuantity": 99731,
           "soldOut": false,
-          "stockStatus": "99,732개",
+          "stockStatus": "99,731개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "4084": {
           "id": "4084",
@@ -22768,11 +22768,11 @@
           "currentPrice": 13000,
           "originalPrice": 16000,
           "discountRate": 19,
-          "stockQuantity": 99434,
+          "stockQuantity": 99433,
           "soldOut": false,
-          "stockStatus": "99,434개",
+          "stockStatus": "99,433개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "4299": {
           "id": "4299",
@@ -23179,11 +23179,11 @@
           "currentPrice": 20800,
           "originalPrice": 20800,
           "discountRate": null,
-          "stockQuantity": 97344,
+          "stockQuantity": 97343,
           "soldOut": false,
-          "stockStatus": "97,344개",
+          "stockStatus": "97,343개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "4427": {
           "id": "4427",
@@ -23404,11 +23404,11 @@
           "currentPrice": 20000,
           "originalPrice": 20000,
           "discountRate": null,
-          "stockQuantity": 98596,
+          "stockQuantity": 98595,
           "soldOut": false,
-          "stockStatus": "98,596개",
+          "stockStatus": "98,595개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "4477": {
           "id": "4477",
@@ -23991,11 +23991,11 @@
           "currentPrice": 35500,
           "originalPrice": 35500,
           "discountRate": null,
-          "stockQuantity": 99599,
+          "stockQuantity": 99598,
           "soldOut": false,
-          "stockStatus": "99,599개",
+          "stockStatus": "99,598개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "4581": {
           "id": "4581",
@@ -24004,11 +24004,11 @@
           "currentPrice": 70000,
           "originalPrice": 70000,
           "discountRate": null,
-          "stockQuantity": 99418,
+          "stockQuantity": 99417,
           "soldOut": false,
-          "stockStatus": "99,418개",
+          "stockStatus": "99,417개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "4582": {
           "id": "4582",
@@ -24017,11 +24017,11 @@
           "currentPrice": 48000,
           "originalPrice": 48000,
           "discountRate": null,
-          "stockQuantity": 99586,
+          "stockQuantity": 99584,
           "soldOut": false,
-          "stockStatus": "99,586개",
+          "stockStatus": "99,584개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "4585": {
           "id": "4585",
@@ -24030,11 +24030,11 @@
           "currentPrice": 71000,
           "originalPrice": 71000,
           "discountRate": null,
-          "stockQuantity": 99876,
+          "stockQuantity": 99875,
           "soldOut": false,
-          "stockStatus": "99,876개",
+          "stockStatus": "99,875개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "4586": {
           "id": "4586",
@@ -24271,11 +24271,11 @@
           "currentPrice": 297000,
           "originalPrice": 297000,
           "discountRate": null,
-          "stockQuantity": 99722,
+          "stockQuantity": 99721,
           "soldOut": false,
-          "stockStatus": "99,722개",
+          "stockStatus": "99,721개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "4628": {
           "id": "4628",
@@ -24337,6 +24337,23 @@
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
           "lastChangedAt": "2026-11-05T09:02:44.123Z"
         },
+        "4662": {
+          "id": "4662",
+          "url": "https://9062.co.kr/product/detail.html?product_no=4662",
+          "name": "고주파가방 런치도시락백 민트 SA3 1개",
+          "currentPrice": 480,
+          "originalPrice": 480,
+          "discountRate": null,
+          "stockQuantity": null,
+          "soldOut": false,
+          "stockStatus": "NaN개",
+          "optCount": 4,
+          "optMinPrice": 480,
+          "optMaxPrice": 720,
+          "optSoldOut": 0,
+          "firstSeenAt": "2026-11-06T03:04:43.787Z",
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
+        },
         "4673": {
           "id": "4673",
           "url": "https://9062.co.kr/product/detail.html?product_no=4673",
@@ -24374,11 +24391,11 @@
           "currentPrice": 54000,
           "originalPrice": 54000,
           "discountRate": null,
-          "stockQuantity": 99968,
+          "stockQuantity": 99967,
           "soldOut": false,
-          "stockStatus": "99,968개",
+          "stockStatus": "99,967개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "4682": {
           "id": "4682",
@@ -24413,11 +24430,11 @@
           "currentPrice": 15000,
           "originalPrice": 15000,
           "discountRate": null,
-          "stockQuantity": 99263,
+          "stockQuantity": 99262,
           "soldOut": false,
-          "stockStatus": "99,263개",
+          "stockStatus": "99,262개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "4692": {
           "id": "4692",
@@ -24764,11 +24781,11 @@
           "currentPrice": 76000,
           "originalPrice": 76000,
           "discountRate": null,
-          "stockQuantity": 99996,
+          "stockQuantity": 99995,
           "soldOut": false,
-          "stockStatus": "99,996개",
+          "stockStatus": "99,995개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "4727": {
           "id": "4727",
@@ -25857,11 +25874,11 @@
           "currentPrice": 13000,
           "originalPrice": 16000,
           "discountRate": 19,
-          "stockQuantity": 99915,
+          "stockQuantity": 99914,
           "soldOut": false,
-          "stockStatus": "99,915개",
+          "stockStatus": "99,914개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "4908": {
           "id": "4908",
@@ -25870,11 +25887,11 @@
           "currentPrice": 13000,
           "originalPrice": 16000,
           "discountRate": 19,
-          "stockQuantity": 99780,
+          "stockQuantity": 99779,
           "soldOut": false,
-          "stockStatus": "99,780개",
+          "stockStatus": "99,779개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "4909": {
           "id": "4909",
@@ -26116,11 +26133,11 @@
           "currentPrice": 16500,
           "originalPrice": 16500,
           "discountRate": null,
-          "stockQuantity": 99930,
+          "stockQuantity": 99929,
           "soldOut": false,
-          "stockStatus": "99,930개",
+          "stockStatus": "99,929개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "4985": {
           "id": "4985",
@@ -26391,6 +26408,19 @@
           "stockStatus": "4,206개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
           "lastChangedAt": "2026-11-05T09:02:44.123Z"
+        },
+        "5040": {
+          "id": "5040",
+          "url": "https://9062.co.kr/product/detail.html?product_no=5040",
+          "name": "B형 부직포가방 S-2216 6입용 1장",
+          "currentPrice": 2000,
+          "originalPrice": 2000,
+          "discountRate": null,
+          "stockQuantity": 3852,
+          "soldOut": false,
+          "stockStatus": "3,852개",
+          "firstSeenAt": "2026-11-06T03:04:43.787Z",
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "5041": {
           "id": "5041",
@@ -28070,11 +28100,11 @@
           "currentPrice": 13500,
           "originalPrice": 13500,
           "discountRate": null,
-          "stockQuantity": 99994,
+          "stockQuantity": 99989,
           "soldOut": false,
-          "stockStatus": "99,994개",
+          "stockStatus": "99,989개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "5575": {
           "id": "5575",
@@ -29103,11 +29133,11 @@
           "currentPrice": 12000,
           "originalPrice": 15000,
           "discountRate": 20,
-          "stockQuantity": 99985,
+          "stockQuantity": 99984,
           "soldOut": false,
-          "stockStatus": "99,985개",
+          "stockStatus": "99,984개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "5770": {
           "id": "5770",
@@ -29270,11 +29300,11 @@
           "currentPrice": 14000,
           "originalPrice": 14000,
           "discountRate": null,
-          "stockQuantity": 99929,
+          "stockQuantity": 99928,
           "soldOut": false,
-          "stockStatus": "99,929개",
+          "stockStatus": "99,928개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "5888": {
           "id": "5888",
@@ -29353,6 +29383,23 @@
           "stockStatus": "2,496개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
           "lastChangedAt": "2026-11-05T09:02:44.123Z"
+        },
+        "5904": {
+          "id": "5904",
+          "url": "https://9062.co.kr/product/detail.html?product_no=5904",
+          "name": "스킨포장 보냉지함 4입(소) 전용 고급보냉가방 3종",
+          "currentPrice": 7800,
+          "originalPrice": 7800,
+          "discountRate": null,
+          "stockQuantity": null,
+          "soldOut": false,
+          "stockStatus": "판매 가능",
+          "optCount": 3,
+          "optMinPrice": 7800,
+          "optMaxPrice": 7800,
+          "optSoldOut": 2,
+          "firstSeenAt": "2026-11-06T03:04:43.787Z",
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "5905": {
           "id": "5905",
@@ -29694,11 +29741,11 @@
           "currentPrice": 13000,
           "originalPrice": 16000,
           "discountRate": 19,
-          "stockQuantity": 99784,
+          "stockQuantity": 99783,
           "soldOut": false,
-          "stockStatus": "99,784개",
+          "stockStatus": "99,783개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "6010": {
           "id": "6010",
@@ -30847,11 +30894,11 @@
           "currentPrice": 11000,
           "originalPrice": 11000,
           "discountRate": null,
-          "stockQuantity": 7675,
+          "stockQuantity": 7672,
           "soldOut": false,
-          "stockStatus": "7,675개",
+          "stockStatus": "7,672개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "6264": {
           "id": "6264",
@@ -30860,11 +30907,11 @@
           "currentPrice": 1700,
           "originalPrice": 1700,
           "discountRate": null,
-          "stockQuantity": 99180,
+          "stockQuantity": 99179,
           "soldOut": false,
-          "stockStatus": "99,180개",
+          "stockStatus": "99,179개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "6265": {
           "id": "6265",
@@ -30873,11 +30920,11 @@
           "currentPrice": 1400,
           "originalPrice": 1400,
           "discountRate": null,
-          "stockQuantity": 97374,
+          "stockQuantity": 97373,
           "soldOut": false,
-          "stockStatus": "97,374개",
+          "stockStatus": "97,373개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "6266": {
           "id": "6266",
@@ -31409,11 +31456,11 @@
           "currentPrice": 50000,
           "originalPrice": 50000,
           "discountRate": null,
-          "stockQuantity": 9982,
+          "stockQuantity": 9981,
           "soldOut": false,
-          "stockStatus": "9,982개",
+          "stockStatus": "9,981개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "6522": {
           "id": "6522",
@@ -31611,11 +31658,11 @@
           "currentPrice": 4800,
           "originalPrice": 4800,
           "discountRate": null,
-          "stockQuantity": 979,
+          "stockQuantity": 978,
           "soldOut": false,
-          "stockStatus": "979개",
+          "stockStatus": "978개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "6591": {
           "id": "6591",
@@ -32130,11 +32177,11 @@
           "currentPrice": 45000,
           "originalPrice": 45000,
           "discountRate": null,
-          "stockQuantity": 99991,
+          "stockQuantity": 99990,
           "soldOut": false,
-          "stockStatus": "99,991개",
+          "stockStatus": "99,990개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "6697": {
           "id": "6697",
@@ -33634,11 +33681,11 @@
           "currentPrice": 14000,
           "originalPrice": 14000,
           "discountRate": null,
-          "stockQuantity": 9925,
+          "stockQuantity": 9921,
           "soldOut": false,
-          "stockStatus": "9,925개",
+          "stockStatus": "9,921개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "6971": {
           "id": "6971",
@@ -33771,11 +33818,11 @@
           "currentPrice": 14400,
           "originalPrice": 14400,
           "discountRate": null,
-          "stockQuantity": 99743,
+          "stockQuantity": 99742,
           "soldOut": false,
-          "stockStatus": "99,743개",
+          "stockStatus": "99,742개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
-          "lastChangedAt": "2026-11-05T09:02:44.123Z"
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         },
         "6992": {
           "id": "6992",
@@ -34363,6 +34410,45 @@
           "stockStatus": "99,998개",
           "firstSeenAt": "2026-11-05T09:02:44.123Z",
           "lastChangedAt": "2026-11-05T09:02:44.123Z"
+        },
+        "7141": {
+          "id": "7141",
+          "url": "https://9062.co.kr/product/detail.html?product_no=7141",
+          "name": "아크릴 디지털 정육가격표 소 (원목무늬)",
+          "currentPrice": 6200,
+          "originalPrice": 6200,
+          "discountRate": null,
+          "stockQuantity": 99998,
+          "soldOut": false,
+          "stockStatus": "99,998개",
+          "firstSeenAt": "2026-11-06T03:04:43.787Z",
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
+        },
+        "7143": {
+          "id": "7143",
+          "url": "https://9062.co.kr/product/detail.html?product_no=7143",
+          "name": "디지털 정육가격표 소 (검정)",
+          "currentPrice": 11800,
+          "originalPrice": 11800,
+          "discountRate": null,
+          "stockQuantity": 99998,
+          "soldOut": false,
+          "stockStatus": "99,998개",
+          "firstSeenAt": "2026-11-06T03:04:43.787Z",
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
+        },
+        "7144": {
+          "id": "7144",
+          "url": "https://9062.co.kr/product/detail.html?product_no=7144",
+          "name": "박용태 고객님 261105(다담아) 제주추가배송비",
+          "currentPrice": 17000,
+          "originalPrice": 17000,
+          "discountRate": null,
+          "stockQuantity": 0,
+          "soldOut": false,
+          "stockStatus": "0개",
+          "firstSeenAt": "2026-11-06T03:04:43.787Z",
+          "lastChangedAt": "2026-11-06T03:04:43.787Z"
         }
       }
     },
@@ -107843,14 +107929,13 @@
     }
   },
   "lastRun": {
-    "at": "2026-11-05T09:02:44.123Z",
+    "at": "2026-11-06T03:04:43.787Z",
     "summary": [
-      "다담아몰 기준 2357개",
-      "대성팩 기준 4006개",
-      "더플러스몰 기준 1023개"
+      "다담아몰 2362개 · 변경 49건"
     ],
     "failed": [],
-    "source": "github"
+    "source": "github",
+    "running": true
   },
   "failureCount": 0,
   "heartbeatMonth": "2026-11"
